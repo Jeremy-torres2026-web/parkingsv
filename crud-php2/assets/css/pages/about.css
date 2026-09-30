@@ -1,0 +1,85 @@
+        body {
+            font-family: 'Poppins', sans-serif;
+            margin: 0;
+            background-color: #f9f9f9;
+            color: #333;
+        }
+
+        h2 {
+            text-align: center;
+            margin-bottom: 10px;
+        }
+
+        .text {
+          text-align: justify;
+          margin: 20px;
+        }
+
+        .section {
+            max-width: 1100px;
+            margin: auto;
+            padding: 20px;
+        }
+
+        .card {
+            background: white;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+            margin-bottom: 20px;
+            text-align: center;
+        }
+
+        /* Imagen del equipo - rectangular */
+        .equipo-img {
+            width: 300px;                  /* ancho rectangular */
+            height: 200px;                 /* altura proporcional */
+            object-fit: contain;           /* mantiene toda la imagen visible */
+            border-radius: 15px;           /* bordes redondeados suaves */
+            box-shadow: 0 6px 15px rgba(0, 0, 0, 0.2);
+            margin: 15px auto;             /* centrada horizontalmente */
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            display: block;
+        }
+
+        .equipo-img:hover {
+            transform: scale(1.05);
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.25);
+            cursor: pointer;
+        }
+
+        /* Misión y Visión lado a lado */
+        .mission-vision {
+            display: flex;
+            gap: 20px;
+            flex-wrap: wrap;
+        }
+
+        .mission-vision .card {
+            flex: 1;
+            min-width: 280px;
+        }
+
+        .card i {
+            font-size: 30px;
+            color: #ff9800;
+            margin-bottom: 10px;
+        }
+
+        /* Contacto */
+        .contact-info a {
+            display: block;
+            margin: 8px 0;
+            color: #333;
+            text-decoration: none;
+            font-weight: 500;
+        }
+
+        .contact-info a:hover {
+            color: #ff9800;
+        }
+
+        .contact-info i {
+            margin-right: 8px;
+            color: #ff9800;
+        }

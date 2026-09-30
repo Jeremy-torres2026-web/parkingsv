@@ -1,0 +1,240 @@
+        :root {
+            --primary: #0C6FF9;
+            --secondary: #4CAF50;
+            --danger: #F44336;
+            --warning: #FF9800;
+            --info: #03A9F4;
+            --dark: #2C3E50;
+            --light: #F8F9FA;
+            --gray: #6C757D;
+            --border: #dee2e6;
+        }
+        
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+        
+        .notifications-container {
+            max-width: 800px;
+            margin: 20px auto;
+            padding: 20px;
+            background: white;
+            border-radius: 12px;
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+        }
+        
+        .header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding-bottom: 20px;
+            border-bottom: 1px solid var(--border);
+            margin-bottom: 20px;
+        }
+        
+        .header h1 {
+            font-size: 28px;
+            color: var(--dark);
+        }
+        
+        .header-actions {
+            display: flex;
+            gap: 12px;
+        }
+        
+        .btn {
+            padding: 10px 16px;
+            border-radius: 8px;
+            border: none;
+            font-weight: 600;
+            cursor: pointer;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            transition: all 0.2s ease;
+        }
+        
+        .btn-primary {
+            background-color: var(--primary);
+            color: white;
+        }
+        
+        .btn-outline {
+            background-color: transparent;
+            border: 1px solid var(--border);
+            color: var(--gray);
+        }
+        
+        .btn:hover {
+            opacity: 0.9;
+            transform: translateY(-1px);
+        }
+        
+        .btn:active {
+            transform: translateY(1px);
+        }
+        
+        .notifications-list {
+            display: flex;
+            flex-direction: column;
+            gap: 16px;
+        }
+        
+        .notification-item {
+            background: white;
+            border-radius: 10px;
+            padding: 16px;
+            position: relative;
+            border-left: 4px solid var(--primary);
+            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+            transition: all 0.3s ease;
+        }
+        
+        .notification-item:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+        }
+        
+        .notification-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 10px;
+        }
+        
+        .notification-type {
+            font-size: 14px;
+            font-weight: 600;
+            padding: 4px 10px;
+            border-radius: 20px;
+            color: white;
+        }
+        
+        .notification-date {
+            font-size: 13px;
+            color: var(--gray);
+        }
+        
+        .notification-title {
+            font-weight: 600;
+            font-size: 17px;
+            margin-bottom: 8px;
+            color: var(--dark);
+        }
+        
+        .notification-content {
+            font-size: 15px;
+            color: #555;
+            margin-bottom: 15px;
+        }
+        
+        .notification-actions {
+            position: absolute;
+            top: 16px;
+            right: 16px;
+        }
+        
+        .action-btn {
+            background: none;
+            border: none;
+            cursor: pointer;
+            width: 32px;
+            height: 32px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: var(--gray);
+            transition: all 0.2s ease;
+        }
+        
+        .action-btn:hover {
+            background-color: rgba(0, 0, 0, 0.05);
+            color: var(--dark);
+        }
+        
+        .action-menu {
+            position: absolute;
+            top: 40px;
+            right: 0;
+            background: white;
+            border-radius: 8px;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.15);
+            width: 200px;
+            z-index: 10;
+            overflow: hidden;
+            display: none;
+        }
+        
+        .action-menu.active {
+            display: block;
+        }
+        
+        .action-menu-item {
+            padding: 12px 16px;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            cursor: pointer;
+            transition: all 0.2s ease;
+        }
+        
+        .action-menu-item:hover {
+            background-color: #f8f9fa;
+        }
+        
+        .action-menu-item i {
+            width: 20px;
+            text-align: center;
+        }
+        
+        .no-notifications {
+            text-align: center;
+            padding: 40px 20px;
+            color: var(--gray);
+        }
+        
+        .no-notifications i {
+            font-size: 48px;
+            margin-bottom: 20px;
+            color: #e0e0e0;
+        }
+        
+        .notification-unread {
+            background-color: #f8fbff;
+            border-left-width: 6px;
+        }
+        
+        .notification-unread .notification-title {
+            font-weight: 700;
+        }
+        
+        .notification-read {
+            opacity: 0.85;
+        }
+        
+        @media (max-width: 768px) {
+            .notifications-container {
+                margin: 10px;
+                padding: 15px;
+            }
+            
+            .header {
+                flex-direction: column;
+                align-items: flex-start;
+                gap: 15px;
+            }
+            
+            .header-actions {
+                width: 100%;
+                justify-content: space-between;
+            }
+            
+            .btn {
+                flex: 1;
+                justify-content: center;
+            }
+        }
